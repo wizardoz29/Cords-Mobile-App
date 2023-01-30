@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher&display=swap");
+:root {
+  /* Colours */
+  --chinese-violet-30: hsla(384, 14%, 46%, 0.3);
+  --chinese-violet: rgb(131, 73, 35);
+  --chinese-violet-90: hsla(384, 14%, 46%, 0.9);
+  --sonic-silver: hsl(208, 7%, 46%);
+  --old-rose-30: hsla(357, 37%, 62%, 0.3);
+  --ghost-white: hsl(233, 33%, 95%);
+  --light-pink: hsl(357, 93%, 84%);
+  --light-gray: hsl(0, 0%, 80%);
+  --old-rose: hsl(357, 37%, 62%);
+  --seashell: hsl(20, 43%, 93%);
+  --charcoal: hsl(203, 38%, 26%);
+  --white: hsl(0, 0%, 100%);
+  --purple-1: #3c00a0;
+  --purple-2: #1a0870;
+  --color-3: #a03100;
+  --color-4: #702200;
+  --color-5: #6fa000;
+  /* Typography */
+  --ff-philosopher: "Philosopher", "Segoe UI", sans-serif;
+  --ff-poppins: "Poppins", "Segoe UI", sans-serif;
+  --fs-1: 4rem;
+  --fs-2: 3.2rem;
+  --fs-3: 2.7rem;
+  --fs-4: 2.4rem;
+  --fs-5: 2.2rem;
+  --fs-6: 2rem;
+  --fs-7: 1.8rem;
+  --fw-500: 500;
+  --fw-700: 700;
+  /* Padding */
+  --section-padding: 80px;
+  /* Box shadow */
+  --shadow-1: 4px 6px 10px hsla(231, 94%, 7%, 0.06);
+  --shadow-2: 2px 0 15px 5px hsla(231, 94%, 7%, 0.06);
+  --shadow-3: 3px 3px var(--chinese-violet);
+  --shadow-4: 3px 5px var(--chinese-violet);
+  /* Border radius */
+  --radius-5: 5px;
+  --radius-10: 10px;
+  /* Clip Path  */
+  --polygon: polygon(100%, 29%, 100%, 100%, 19%, 99%, 0 56%);
+  /* Transition */
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+  --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a, img, span, data, input, button, textarea {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input, button, textarea {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+input, textarea {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+html {
+  font-family: var(--ff-poppins);
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--chinese-violet);
+  color: var(--white);
+  font-size: 1.6rem;
+  line-height: 1.8;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 90%;
+  max-height: 100%;
+  margin-top: 22rem;
+  margin-left: 14rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .welcome h2 {
+  font-size: 3.5rem;
+}
+
+.next {
+  -webkit-margin-before: 14rem;
+          margin-block-start: 14rem;
+  margin-left: 6rem;
+  width: 200px;
+}
+.next .reg-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.next .reg-button h5 {
+  color: var(--white);
+  -webkit-padding-after: 1rem;
+          padding-block-end: 1rem;
+}
+.next .reg-button .btn {
+  padding: 9px 18px;
+  transition: var(--transition-1);
+  border: 1px solid var(--sonic-silver);
+  background-color: var(--white);
+  color: var(--chinese-violet);
+  border-radius: 5px;
+}
+
+#loginpage {
+  background-color: var(--white);
+}
+
+#logsection {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(var(--white), var(--white));
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin-top: 100px;
+}
+#logsection .form-box {
+  width: 90%;
+  max-width: 650px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--white);
+  padding: 50px 60px 70px;
+  text-align: center;
+}
+#logsection h2 {
+  font-size: 30px;
+  margin-bottom: 60px;
+  color: var(--charcoal);
+  position: relative;
+}
+#logsection h2::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  border-radius: 3px;
+  background: #3c00a0;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.intro {
+  border: 0;
+}
+.intro h3 {
+  color: var(--charcoal);
+  font-size: 16px;
+  text-align: left;
+  padding-bottom: 25px;
+}
+
+.input-field {
+  background: #eaeaea;
+  margin: 15px 0;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  max-height: 65px;
+  transition: max-height 0.6s;
+  overflow: hidden;
+  border: 1px solid var(--charcoal);
+}
+.input-field input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  padding: 18px 15px;
+}
+.input-field i {
+  margin-left: 15px;
+  color: #999;
+}
+
+form p {
+  text-align: left;
+  font-size: 13px;
+}
+form p a {
+  text-decoration: none;
+}
+
+.btn-field {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.btn-field button {
+  flex-basis: 48%;
+  background: var(--charcoal);
+  color: var(--white);
+  height: 40px;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: background 1s;
+}
+.btn-field button.disabled {
+  background: #eaeaea;
+  color: #555;
+}
+
+.input-group {
+  height: 650px;
+}
+
+@media (max-width: 575px) {
+  #loginpage {
+    margin-top: 350px;
+  }
+  #logsection {
+    max-width: 70%;
+  }
+  #logsection .form-box {
+    top: 35%;
+    width: 80%;
+    min-width: 290px;
+    max-width: 400px;
+    padding: 20px 30px 40px;
+    margin-left: 50px;
+  }
+}/*# sourceMappingURL=style.css.map */
